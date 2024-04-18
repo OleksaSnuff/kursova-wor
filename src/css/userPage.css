@@ -1,0 +1,21 @@
+.button {
+  background-color: #007bff; /* колір фону за замовчуванням */
+  color: #fff; /* колір тексту */
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #28a745;
+  scale: 2;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.title {
+  color: #28a745;
+}

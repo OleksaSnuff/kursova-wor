@@ -1,0 +1,1122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.min.css"
+      integrity="sha512-4xo8blKMVCiXpTaLzQSLSw3KFOVPWhm/TRtuPVc4WG6kUgjH6J03IBuG7JZPkcWMxJ5huwaBpOpnwYElP/m6wg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./css/styles.css" />
+
+    <title>Chapter 2</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="header-wrap conatainer">
+        <a href="./index.html" class="header_logo"
+          >Lern<span class="header_logo_it">IT</span></a
+        >
+        <nav class="header-navigation">
+          <ul class="header-navigation-list">
+            <li class="header-navigation-list-item">
+              <a href="./index.html" class="header-navigation-link">Тема 1</a>
+            </li>
+            <li class="header-navigation-list-item">
+              <a href="./chapter2.html" class="header-navigation-link"
+                >Тема 2</a
+              >
+            </li>
+            <li class="header-navigation-list-item">
+              <a href="./chapter3.html" class="header-navigation-link"
+                >Тема 3</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <section class="zero-section" id="section-0">
+        <div class="zero-chapter-wrap conatainer">
+          <div class="section-wrap">
+            <h1 class="chapter-header">
+              Тема 2. Загальна характеристика мови програмування JavaScript
+            </h1>
+            <p>У цій темі ми будемо розглядати:<br /></p>
+            <ol class="theme-list">
+              <li>
+                <p>
+                  Основні поняття та складові динамічної, об'єктно-орієнтованої
+                  мови програмування JavaScript.<br />
+                </p>
+              </li>
+              <li>
+                <p>
+                  Вирази та керування процесом виконання сценаріїв у JavaScript
+                  (умовні та циклічні інструкції).<br />
+                </p>
+              </li>
+              <li>
+                <p>Функції, об'єкти та масиви у JavaScript<br /></p>
+              </li>
+            </ol>
+          </div>
+          <button
+            type="button"
+            class="main-button"
+            onclick="showSection('section-1')"
+          >
+            Починаймо!
+          </button>
+        </div>
+      </section>
+      <section class="first-section visually-hidden" id="section-1">
+        <div class="conatainer" id="first-section">
+          <div class="section-wrap">
+            <h2 class="section-header">Основні поняття та складові в JS</h2>
+            <p>
+              JavaScript (або скорочено JS) — це повноцінна динамічна мова
+              програмування, яка застосовується до HTML документу та може
+              забезпечити динамічну взаємодію на вебсайтах. Її розробив Брендан
+              Айк, співзасновник проекту Mozilla, Mozilla Foundation та Mozilla
+              Corporation.
+            </p>
+            <img src="./img/javascript.webp" alt="" class="img" />
+            <p>
+              JavaScript неймовірно універсальний і дружелюбний до новачків. З
+              великим досвідом ви зможете створювати ігри, анімовану 2D і 3D
+              графіку, повномасштабні додатки з базами даних та багато іншого!
+            </p>
+            <p>
+              JavaScript сам по собі досить компактний, і при цьому дуже
+              гнучкий. Розробниками написано велику кількість інструментів
+              поверх основної мови JavaScript, які розблоковують велику
+              кількість додаткових функцій з дуже невеликими зусиллями.
+            </p>
+            <h2 class="block-header">Змінні</h2>
+            <p>
+              Змінні — це контейнери, всередині яких ви можете зберігати
+              значення. Ви розпочинаєте з того, що оголошуєте змінну за
+              допомогою ключового слова var (не рекомендується, продовжуйте
+              читати, щоб отримати пояснення) або let, за яким слідує будь-яке
+              ім'я, яким ви захочете її назвати:
+            </p>
+            <p class="code">let myVariable;</p>
+            <p>
+              Тепер можна помістити в неї дані (іншими словами, визначити
+              змінну), використовуючи оператор присвоєння = :
+            </p>
+            <p class="code">
+              myVariable = "Bob";<br />або ж написати код компактніше <br />let
+              myVariable = "Bob";
+            </p>
+            <p>
+              Після визначення значення змінної ви можете змінити його пізніше:
+            </p>
+            <p class="code">myVariable = 'Steve';</p>
+            <p>Тепер змінна myVariable містить таке значення 'Steve'</p>
+            <h2 class="block-header">Перевірка знань</h2>
+            <div id="test" class="quiz-wrap"></div>
+            <div class="twoButtonsWrap">
+              <button
+                type="submit"
+                id="button"
+                class="main-button check-button"
+              >
+                Перевірити
+              </button>
+              <button
+                class="main-button check-button"
+                onclick="showCorrectAnswer('test')"
+              >
+                Показати відповіді
+              </button>
+            </div>
+            <h2 class="block-header">Типи даних</h2>
+            <img
+              src="./img/1_l_ZDRMLFUVaIO38p9Qkzvw.jpg"
+              alt="types of data"
+              class="img"
+            />
+            <p>
+              <b>String</b><br />Послідовність тексту, відома як рядок. Щоб
+              вказати, що це значення є рядком, ви повинні обгорнути його
+              лапками.
+            </p>
+            <p class="code">let myVariable = 'Bob';</p>
+            <p>
+              <b>Number</b><br />
+              Числа. Числа не мають лапок навколо них.
+            </p>
+            <p class="code">let myVariable = 10;</p>
+            <p>
+              <b>Boolean</b><br />
+              Значення True (Правда)/False (Брехня). Слова true і false — це
+              спеціальні ключові слова в JS і не потребують лапок.
+            </p>
+            <p class="code">let myVariable = true;</p>
+            <p>
+              <b>Array</b><br />
+              Масив, який дозволяє зберігати кілька значень в одному посиланні.
+            </p>
+            <p class="code">let myVariable = [1, 'Bob', 'Steve', 10];</p>
+            <p>
+              Звертатися до кожного елементу масиву можна так: myVariable[0],
+              myVariable[1], і так далі.
+            </p>
+            <p>
+              <b>Object</b><br />
+              В принципі, все що завгодно. Все в JavaScript є об'єктом і може
+              бути збережено у змінній. Майте це на увазі, поки ви вивчаєте.
+            </p>
+            <p class="code">let myVariable = document.querySelector('h1');</p>
+            <p>Все з раніше наведених прикладів.</p>
+            <h2 class="block-header">Оператори в мові JavaScript</h2>
+            <img
+              src="./img/javascript-operators.png"
+              alt="javascript operators"
+              class="img"
+            />
+            <p>
+              <b>Додавання(конкантинація)</b><br />Використовується для
+              додавання двох чисел або рядків<br />
+              Символ: +
+            </p>
+            <p class="code">
+              6 + 9;<br />
+              "Hello " + "world!";
+            </p>
+            <p>
+              <b>Віднімання, множення, ділення</b><br />Використовується як і в
+              класичній математиці
+              <br />
+              Символи: -,*,/
+            </p>
+            <p class="code">
+              6 * 9;<br />
+              6 - 9;<br />
+              6 / 9;
+            </p>
+            <p>
+              <b>Присвоєння</b><br />Використовується для присвоєння змінній
+              значення
+              <br />
+              Символ: =
+            </p>
+            <p class="code">let myVariable = "Bob";</p>
+            <p>
+              <b>== (оператор нестрогого рівняння):</b> порівнює значення без
+              звертання до типів даних. JavaScript може провести автоматичне
+              приведення типів, якщо типи операндів відрізняються.
+              <br />Приклад:
+            </p>
+            <p class="code">
+              5 == "5" // true, тому що JavaScript автоматично перетворює рядок
+              в число для порівняння
+            </p>
+            <p>
+              <b>Дорівнює(оператор строгого рівняння)</b><br />Використовується
+              для перевірки двох значень на рівність. Повертає
+              true/false(Boolean).Воно не проводить автоматичне приведення
+              типів, і обидва операнди повинні бути одного і того ж типу для
+              отримання true.
+              <br />
+              Символ: ===
+            </p>
+            <p class="code">
+              let myVariable = 3; <br />myVariable === 4;<br />false;
+            </p>
+            <h2 class="block-header">Логічні оператори</h2>
+            <img
+              src="./img/JavaScript-Logical-Operators.webp"
+              alt="logical operators"
+              class="img"
+            />
+            <p>
+              <b>Заперечення</b><br />Повертає логічно протилежне значення, яке
+              йому передує; перетворює true в false і таке інше. Коли
+              використовується разом з оператором рівності, оператор заперечення
+              перевіряє, чи два значення не є рівними.
+              <br />
+              Символ: !, ==!
+            </p>
+            <p>
+              Основний вираз - true, але порівняння повертає false, оскільки ми
+              його заперечуємо:
+            </p>
+            <p class="code">
+              let myVariable = 3;<br />
+              !(myVariable === 3);<br />false
+            </p>
+            <p>
+              Тут ми перевіряємо "myVariable НЕ рівно 3". Це повертає false,
+              оскільки myVariable рівне 3.
+            </p>
+            <p class="code">
+              let myVariable = 3;<br />
+              myVariable !== 3;<br />
+              false
+            </p>
+            <p>
+              <b>Примітка:</b><br />
+              Змішування типів даних може призвести до деяких неочікуваних
+              результатів при виконанні обчислень, тому будьте обережні,
+              правильно посилаючись на ваші змінні, щоб отримувати очікувані
+              результати. Наприклад, введіть "35" + "25" у вашу консоль. Чому ви
+              не отримали результат, який очікували? Тому що лапки перетворили
+              числа на рядки, отже, вас насправді чекає конкатенація рядків, а
+              не додавання чисел. Якщо ви введете 35 + 25, то отримаєте
+              правильний результат.
+            </p>
+
+            <p>
+              <b>Логічний оператор "або"</b><br />в JavaScript представлений
+              символом ||. Використовується для виразів, що повертають true,
+              якщо хоча б один із умов вираження є true.
+            </p>
+            <p class="code">
+              "let result = (5 > 3) || (10 &lt; 5);" <br />true
+            </p>
+            <p>
+              <b>Логічний оператор "і"</b><br />в JavaScript представлений
+              символом &&. Використовується для виразів, що повертають true,
+              лише якщо обидві умови вираження є true.
+            </p>
+            <p class="code">let result = (5 > 3) && (10 &lt; 5); <br />false</p>
+            <h2 class="block-header">Перевірка знань</h2>
+            <div class="test-wrap">
+              <form class="quiz-form" id="quizForm">
+                <fieldset class="quiz-fieldset" id="fieldset0">
+                  <div class="quiz-wrap-set">
+                    <p>1. Що означає символ "+" в JS?</p>
+                    <label class="quiz-label"
+                      ><input type="radio" name="q1" value="True" checked /> Не
+                      має призначення</label
+                    >
+                    <label class="quiz-label"
+                      ><input type="radio" name="q1" value="True" />
+                      Порівняння</label
+                    >
+                    <label class="quiz-label"
+                      ><input type="radio" name="q1" value="true" />
+                      Конкатенацію</label
+                    >
+                  </div>
+
+                  <div class="quiz-wrap-set">
+                    <p>2. Тип даних, що має тільки значення true і false?</p>
+                    <label class="quiz-label"
+                      ><input type="radio" name="q2" value="True" checked />
+                      string</label
+                    >
+                    <label class="quiz-label"
+                      ><input type="radio" name="q2" value="true" />
+                      boolean</label
+                    >
+                    <label class="quiz-label"
+                      ><input type="radio" name="q2" value="True" /> object
+                    </label>
+                  </div>
+
+                  <div class="quiz-wrap-set">
+                    <p>
+                      3. Яке значення отримаємо провівши таку операцію "35"+
+                      "25"?
+                    </p>
+                    <label class="quiz-label"
+                      ><input type="radio" name="q3" value="true" checked />
+                      3525</label
+                    >
+                    <label class="quiz-label"
+                      ><input type="radio" name="q3" value="True" /> 60</label
+                    >
+                    <label class="quiz-label"
+                      ><input type="radio" name="q3" value="True" />
+                      Помилку</label
+                    >
+                  </div>
+                </fieldset>
+              </form>
+            </div>
+            <div class="twoButtonsWrap">
+              <button
+                type="button"
+                onclick="submitQuiz('quizForm')"
+                class="main-button check-button"
+              >
+                Перевірити
+              </button>
+              <button
+                class="main-button check-button"
+                onclick="showCorrectAnswerField('fieldset0')"
+              >
+                Показати відповіді
+              </button>
+            </div>
+
+            <button
+              type="button"
+              class="main-button"
+              onclick="showSection('section-2')"
+            >
+              До наступного блоку
+            </button>
+          </div>
+        </div>
+      </section>
+      <section class="second-section visually-hidden" id="section-2">
+        <div class="container" id="second-section">
+          <div class="section-wrap">
+            <h2 class="section-header">
+              Керування процесом виконання сценаріїв
+            </h2>
+            <img src="./img/if-else.jpg" alt="if else operators" class="img" />
+            <p>
+              <b>Умови</b> <br />
+              Це конструкції в коді, які дозволяють перевірити, чи є вираз
+              істинним чи хибним, і виконати інший код залежно від отриманого
+              результату. Найбільш розповсюдженою формою умови є конструкція if
+              ... else.
+            </p>
+
+            <p class="code">
+              let iceCream = "chocolate"; <br />
+              if (iceCream === "chocolate") {<br />
+              alert("Yay, I love chocolate ice cream!");<br />
+              } else {<br />
+              alert("Awwww, but chocolate is my favorite...");<br />
+              }
+            </p>
+            <p>
+              Вираз всередині if ( ... ) — це перевірка, яка використовує
+              оператор строгого рівності (як описано вище), щоб порівняти змінну
+              iceCream із рядком "chocolate" і перевірити, чи вони ідентичні.
+              Якщо це порівняння повертає true, виконується перший блок коду. В
+              іншому випадку цей код пропускається, і виконується другий блок
+              коду після інструкції else.
+            </p>
+            <p>
+              Якщо вираз всередині if буде дорівнювати нулю або одиниці, то цей
+              блок не буде виконуватись ніколи, або ж навпки буде робити це
+              завжди
+            </p>
+            <p class="code">
+              if (0) { // 0 is falsy <br />
+              ... <br />
+              }
+            </p>
+            <p class="code">
+              if (1) { // 1 is truthy <br />
+              ... <br />
+              } <br />
+            </p>
+            <h2 class="block-header">Блок "else"</h2>
+            <p>
+              Інструкція if може містити необов'язковий блок "else" (інакше).
+              Цей блок виконується, коли умова if є хибною (false).
+            </p>
+            <p class="code">
+              if (age > 18) {<br />
+              accessAllowed = true;<br />
+              } else {<br />
+              accessAllowed = false;<br />
+              }
+            </p>
+            <p>
+              Деколи важливо перевірити кілька варіантів умови. Для цього
+              використовується блок else if.
+            </p>
+            <p class="code">
+              let score = 75;<br />
+              <br />
+              if (score >= 90) {<br />
+              console.log("Відмінно"); <br />
+              } else if (score >= 70) {<br />
+              console.log("Добре");<br />
+              } else if (score >= 50) {<br />
+              console.log("Задовільно");<br />
+              } else {<br />
+              console.log("Незадовільно");<br />
+              }
+            </p>
+            <h2 class="block-header">Перевірка знань</h2>
+            <div class="quiz-wrap" id="test_1"></div>
+
+            <div class="twoButtonsWrap">
+              <button id="button1" class="main-button check-button">
+                Перевірити
+              </button>
+              <button
+                class="main-button check-button"
+                onclick="showCorrectAnswer('test_1')"
+              >
+                Показати відповіді
+              </button>
+            </div>
+            <h2 class="block-header">Цикли</h2>
+            <p>
+              У JavaScript існують різні види циклів, такі як for, while, і
+              do...while, які дозволяють вам виконувати блок коду кілька разів.
+              Цикли зручні, якщо ви хочете запускати один і той самий код знову
+              і знову, кожен раз з іншим значенням.
+            </p>
+            <img src="./img/loops.jpg" alt="loops" class="img" />
+            <p>
+              <b>Цикл «while»</b><br />У цьому циклі, блок коду буде
+              виконуватися, доки умова залишається істинною. У разі, якщо умова
+              вже на початку не є істинною, блок коду не виконається жодного
+              разу. <br />Цикл while має наступний синтаксис:
+            </p>
+            <p class="code">
+              while (condition) { <br />
+              // код <br />
+              }
+            </p>
+            <p>
+              Код з тіла циклу виконується, поки умова condition є істинною.
+            </p>
+            <p class="code">
+              let i = 0; <br />
+              while (i &lt; 3) { // выводит 0, затем 1, затем 2 <br />
+              alert( i ); <br />
+              i++; <br />
+              }
+            </p>
+            <p>
+              Один виклик тіла циклу у наукових термінах називається ітерацією.
+              У цьому циклі, зазначеному вище, здійснюється три ітерації. <br />
+
+              Якщо б рядок i++ був відсутній у вищенаведеному прикладі, то цей
+              цикл, в теорії, виконувався б безкінечно. На практиці, звісно,
+              браузер не дозволить цьому відбутися і надасть користувачеві
+              можливість зупинити «завислий» скрипт, а JavaScript на сервері
+              доведеться припинити процес. <br />
+
+              Будь-який вираз чи змінна може бути умовою циклу, не лише
+              порівняння: умова циклу while обчислюється і перетворюється в
+              логічне значення.
+            </p>
+            <p>
+              <b>Цикл "do...while"</b><br />
+              Перевірку умови можна розмістити під тілом циклу, використовуючи
+              спеціальний синтаксис do...while:
+            </p>
+            <p class="code">
+              do { <br />
+              // тіло цикла <br />
+              } while (condition);
+            </p>
+            <p>
+              Цикл спочатку виконає тіло, а потім перевірить умову condition, і
+              доки її значення рівне true, він буде виконуватись знову і знову.
+              <br />
+              Наприклад:
+            </p>
+            <p class="code">
+              let i = 0; <br />
+              do {<br />
+              alert( i ); <br />
+              i++; <br />
+              } while (i &lt; 3);
+            </p>
+            <p>
+              Такий синтаксис виправданий, якщо ви хочете, щоб тіло циклу
+              виконалося хоча б один раз, навіть якщо умова виявиться хибною. На
+              практиці, частіше використовується форма з передумовою: while
+              (...) { ... }.
+            </p>
+            <p>
+              <b>Цикл "for"</b><br />Більш складний, але при цьому
+              найпоширеніший цикл - це цикл `for`. Виглядає він наступним чином:
+            </p>
+            <p class="code">
+              for (початок; умова; крок) { <br />
+              // ... тіло циклу ... <br />
+              }
+            </p>
+            <p>
+              Давайте проаналізуємо кожну частину на прикладі. У цьому циклі
+              викликається alert(i) для i від 0 до (не включаючи) 3:
+            </p>
+            <p class="code">
+              for (let i = 0; i &lt; 3; i++) { <br />
+              alert(i); <br />
+              }
+            </p>
+            <p>Всього ми розглянули 3 типи циклів:</p>
+            <ul>
+              <li>while: Перевіряє умову перед кожною ітерацією.</li>
+              <li>do..while: Перевіряє умову після кожної ітерації.</li>
+              <li>
+                for: Перевіряє умову перед кожною ітерацією і надає можливість
+                задати додаткові налаштування.
+              </li>
+            </ul>
+            <div class="test-wrap">
+              <form class="quiz-form" id="quizForm1">
+                <fieldset class="quiz-fieldset" id="fieldset1">
+                  <div class="quiz-wrap-set">
+                    <p>
+                      1. Скільки разів виконається блок коду в циклі do...while,
+                      якщо умова false?
+                    </p>
+                    <label class="quiz-label"
+                      ><input type="radio" name="q1" value="True" checked />
+                      0</label
+                    >
+                    <label class="quiz-label"
+                      ><input type="radio" name="q1" value="true" /> 1</label
+                    >
+                    <label class="quiz-label"
+                      ><input type="radio" name="q1" value="True" /> 2</label
+                    >
+                  </div>
+
+                  <div class="quiz-wrap-set">
+                    <p>2. Один виклик тіла циклу називається?</p>
+                    <label class="quiz-label"
+                      ><input type="radio" name="q2" value="true" checked />
+                      Конкантинація</label
+                    >
+                    <label class="quiz-label"
+                      ><input type="radio" name="q2" value="True" />
+                      Ітерація</label
+                    >
+                    <label class="quiz-label"
+                      ><input type="radio" name="q2" value="True" /> Імплікація
+                    </label>
+                  </div>
+
+                  <div class="quiz-wrap-set">
+                    <p>
+                      3. Який тип циклу перевіряє умову перед кожною ітерацією і
+                      дозволяє встановлювати додаткові параметри?
+                    </p>
+                    <label class="quiz-label"
+                      ><input type="radio" name="q3" value="true" checked />
+                      for</label
+                    >
+                    <label class="quiz-label"
+                      ><input type="radio" name="q3" value="True" /> Сполучені
+                      while</label
+                    >
+                    <label class="quiz-label"
+                      ><input type="radio" name="q3" value="True" />
+                      do..while</label
+                    >
+                  </div>
+                </fieldset>
+              </form>
+            </div>
+
+            <div class="twoButtonsWrap">
+              <button
+                type="button"
+                onclick="submitQuiz('quizForm1')"
+                class="main-button check-button"
+              >
+                Перевірити
+              </button>
+              <button
+                class="main-button check-button"
+                onclick="showCorrectAnswerField('fieldset1')"
+              >
+                Показати відповіді
+              </button>
+            </div>
+          </div>
+          <button
+            type="button"
+            class="main-button"
+            onclick="showSection('section-3')"
+          >
+            До наступного блоку
+          </button>
+        </div>
+      </section>
+      <section class="second-section visually-hidden" id="section-3">
+        <div class="container" id="second-section">
+          <div class="section-wrap">
+            <h2 class="section-header">
+              Функції, об'єкти та масиви у JavaScript
+            </h2>
+            <h2 class="block-header">Масиви у JavaScript</h2>
+            <p>
+              Масиви у JavaScript є збереженням даних, яке дозволяє зберігати
+              колекцію елементів у впорядкованому порядку. Вони дуже потужний та
+              важливий інструмент у програмуванні JavaScript, оскільки
+              дозволяють зберігати, організовувати та маніпулювати даними.
+            </p>
+
+            <p>Ось декілька основних аспектів масивів у JavaScript:</p>
+
+            <ol>
+              <li>
+                <p>
+                  <b>Створення масиву:</b><br />
+                  Масиви у JavaScript можна створити за допомогою літералу
+                  масиву <code>[]</code>, у якому перераховані елементи масиву
+                  розділяються комами. Наприклад:
+                </p>
+                <p class="code">
+                  let fruits = ["яблуко", "банан", "апельсин"];
+                </p>
+              </li>
+              <li>
+                <p>
+                  <b>Доступ до елементів:</b><br />
+                  Доступ до елементів масиву можна отримати за допомогою
+                  індекса, який вказується у квадратних дужках <code>[]</code>.
+                  Індексація починається з нуля. Наприклад:
+                </p>
+                <p class="code">
+                  let firstFruit = fruits[0]; // Отримати перший елемент масиву
+                  (яблуко)
+                </p>
+              </li>
+              <li>
+                <p>
+                  <b>Додавання та видалення елементів:</b><br />
+                  Елементи можна додавати та видаляти з масиву за допомогою
+                  методів, таких як <code>push()</code>, <code>pop()</code>,
+                  <code>shift()</code> та <code>unshift()</code>. Наприклад:
+                </p>
+                <p class="code">
+                  fruits.push("груша"); // Додати новий елемент (груша) в кінець
+                  масиву<br />
+                  fruits.pop(); // Видалити останній елемент масиву (груша)
+                </p>
+              </li>
+              <li>
+                <p>
+                  <b>Довжина масиву:</b><br />
+                  Властивість <code>length</code> дозволяє отримати кількість
+                  елементів у масиві. Наприклад:
+                </p>
+                <p class="code">
+                  let length = fruits.length; // Отримати кількість елементів у
+                  масиві
+                </p>
+              </li>
+              <li>
+                <p>
+                  <b>Ітерація по масиву:</b><br />
+                  Масиви можна перебирати за допомогою циклів, таких як
+                  <code>for</code> або <code>forEach()</code>, або
+                  використовуючи інші методи перебору, такі як
+                  <code>map()</code>, <code>filter()</code>,
+                  <code>reduce()</code>, тощо. Наприклад:
+                </p>
+                <p class="code">
+                  for (let i = 0; i &lt; fruits.length; i++) {<br />
+                  &nbsp;&nbsp;&nbsp;&nbsp;console.log(fruits[i]); // Вивести
+                  кожен елемент масиву<br />
+                  }<br />
+                  <br />
+                  fruits.forEach(function(fruit) {<br />
+                  &nbsp;&nbsp;&nbsp;&nbsp;console.log(fruit); // Вивести кожен
+                  елемент масиву<br />
+                  });
+                </p>
+              </li>
+            </ol>
+
+            <p>
+              Ці основні аспекти дозволяють вам ефективно працювати з масивами у
+              JavaScript, що включає їх створення, доступ до елементів,
+              додавання та видалення елементів, роботу з довжиною масиву та
+              ітерацію по елементах масиву. Масиви важливий інструмент для
+              роботи з даними та їх обробки в програмуванні JavaScript.
+            </p>
+            <img src="./img/array.png" alt="loops" class="img" />
+            <h2 class="block-header">Функції у JavaScript</h2>
+
+            <p>
+              Функції в JavaScript - це блоки коду, які використовуються для
+              виконання певних завдань або обчислень. Вони дозволяють
+              упорядковувати код, забезпечуючи його перевикористання та
+              створення більш структурованих програм.
+            </p>
+
+            <p>Ось декілька основних аспектів функцій у JavaScript:</p>
+
+            <ol>
+              <li>
+                <p>
+                  <b>Оголошення функції:</b><br />
+                  Функції можна оголосити за допомогою ключового слова
+                  <code>function</code>, за яким слідує ім'я функції та список
+                  параметрів у круглих дужках, якщо вони потрібні. Тіло функції
+                  заключається в фігурні дужки. Наприклад:
+                </p>
+                <p class="code">
+                  function greet(name) {<br />
+                  &nbsp;&nbsp;&nbsp;&nbsp;console.log("Привіт, " + name +
+                  "!");<br />
+                  }
+                </p>
+              </li>
+              <li>
+                <p>
+                  <b>Виклик функції:</b><br />
+                  Функцію можна викликати, просто вказавши її ім'я та передавши
+                  необхідні параметри в круглих дужках. Наприклад:
+                </p>
+                <p class="code">greet("Василь");</p>
+              </li>
+              <li>
+                <p>
+                  <b>Повернення значення:</b><br />
+                  Функція може повертати значення за допомогою ключового слова
+                  <code>return</code>. Це значення може бути використане у
+                  викликах функції. Наприклад:
+                </p>
+                <p class="code">
+                  function add(a, b) {<br />
+                  &nbsp;&nbsp;&nbsp;&nbsp;return a + b;<br />
+                  }<br />
+                  let result = add(3, 5); // result = 8
+                </p>
+              </li>
+              <li>
+                <p>
+                  <b>Анонімні функції:</b><br />
+                  Функції можуть також бути анонімними, тобто без імені. Вони
+                  можуть бути призначені змінним як значення або передані як
+                  аргументи іншим функціям. Наприклад:
+                </p>
+                <p class="code">
+                  let square = function(x) {<br />
+                  &nbsp;&nbsp;&nbsp;&nbsp;return x * x;<br />
+                  };<br />
+                  let result = square(4); // result = 16
+                </p>
+              </li>
+              <li>
+                <p>
+                  <b>Функціональні вирази:</b><br />
+                  Функції також можуть бути оголошені як функціональні вирази,
+                  які призначаються змінним. Це дозволяє створювати анонімні
+                  функції або навіть іменовані функції. Наприклад:
+                </p>
+                <p class="code">
+                  let multiply = function multiply(a, b) {<br />
+                  &nbsp;&nbsp;&nbsp;&nbsp;return a * b;<br />
+                  };<br />
+                  let result = multiply(3, 4); // result = 12
+                </p>
+              </li>
+            </ol>
+
+            <p>
+              Ці основні аспекти дозволяють використовувати функції для
+              організації та виконання коду в JavaScript. Функції дуже потужний
+              інструмент для створення структурованих та повторно
+              використовуваних програм.
+            </p>
+            <img src="./img/func.png" alt="func" class="img" />
+            <h2 class="block-header">Перевірка знань</h2>
+            <div id="test2" class="quiz-wrap"></div>
+
+            <div class="twoButtonsWrap">
+              <button
+                type="submit"
+                id="button2"
+                class="main-button check-button"
+              >
+                Перевірити
+              </button>
+              <button
+                class="main-button check-button"
+                onclick="showCorrectAnswer('test2')"
+              >
+                Показати відповіді
+              </button>
+            </div>
+
+            <h2 class="block-header">Об'єкти у JavaScript</h2>
+            <p>
+              Об'єкти у JavaScript є основною будівельною одиницею мови і
+              використовуються для зберігання даних та організації коду в
+              логічні групи. Об'єкти можуть містити дані у вигляді пар
+              ключ-значення, які називаються властивостями, а також методи, які
+              є функціями, прикріпленими до об'єкта.
+            </p>
+
+            <p>Основне що слід знати про об'єкти у JavaScript:</p>
+
+            <ol>
+              <li>
+                <p>
+                  <b>Створення об'єкта:</b><br />
+                  Об'єкти можна створювати за допомогою літерала об'єкта
+                  <code>{}</code>, в якому можна визначити властивості та їх
+                  значення, розділені двокрапкою. Наприклад:
+                </p>
+                <p class="code">
+                  let person = {<br />
+                  &nbsp;&nbsp;&nbsp;&nbsp;name: "Василь",<br />
+                  &nbsp;&nbsp;&nbsp;&nbsp;age: 30,<br />
+                  &nbsp;&nbsp;&nbsp;&nbsp;profession: "розробник"<br />
+                  };
+                </p>
+              </li>
+              <li>
+                <p>
+                  <b>Доступ до властивостей:</b><br />
+                  Властивості об'єкта можна отримати або змінити, використовуючи
+                  квадратні дужки або крапку. Наприклад:
+                </p>
+                <p class="code">
+                  let name = person.name; // Отримання значення властивості
+                  name<br />
+                  person.age = 35; // Зміна значення властивості age
+                </p>
+              </li>
+              <li>
+                <p>
+                  <b>Методи:</b><br />
+                  Методи - це функції, що прикріплені до об'єкта. Їх можна
+                  визначити як властивості, що містять функції. Наприклад:
+                </p>
+                <p class="code">
+                  let person = {<br />
+                  &nbsp;&nbsp;&nbsp;&nbsp;name: "Василь",<br />
+                  &nbsp;&nbsp;&nbsp;&nbsp;age: 30,<br />
+                  &nbsp;&nbsp;&nbsp;&nbsp;profession: "розробник",<br />
+                  &nbsp;&nbsp;&nbsp;&nbsp;greet: function() {<br />
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;console.log("Привіт,
+                  я " + this.name);<br />
+                  &nbsp;&nbsp;&nbsp;&nbsp;}<br />
+                  };<br />
+                  person.greet(); // Виклик методу greet
+                </p>
+              </li>
+              <li>
+                <p>
+                  <b>Ключове слово <code>this</code>:</b><br />
+                  Ключове слово <code>this</code> вказує на поточний об'єкт, в
+                  якому воно використовується. Воно дозволяє отримати доступ до
+                  властивостей та методів об'єкта всередині цього об'єкта.
+                  Наприклад, у методі <code>greet</code> вище
+                  <code>this.name</code> посилається на властивість
+                  <code>name</code> поточного об'єкта <code>person</code>.
+                </p>
+              </li>
+              <li>
+                <p>
+                  <b>Прототипи:</b><br />
+                  JavaScript використовує механізм прототипів для успадкування
+                  властивостей та методів від інших об'єктів. Кожний об'єкт в
+                  JavaScript має посилання на прототип, який використовуєть ся
+                  для пошуку властивостей та методів, які не визначені
+                  безпосередньо в об'єкті.
+                </p>
+              </li>
+              <li>
+                <p>
+                  <b>Конструктори об'єктів:</b><br />
+                  Конструктори - це функції, що використовуються для створення
+                  нових об'єктів. Вони дозволяють створювати багато об'єктів з
+                  однаковою структурою та поведінкою. Наприклад:
+                </p>
+                <p class="code">
+                  function Person(name, age, profession) {<br />
+                  &nbsp;&nbsp;&nbsp;&nbsp;this.name = name;<br />
+                  &nbsp;&nbsp;&nbsp;&nbsp;this.age = age;<br />
+                  &nbsp;&nbsp;&nbsp;&nbsp;this.profession = profession;<br />
+                  }<br />
+                  let person1 = new Person("Олексій", 25, "інженер");<br />
+                  let person2 = new Person("Наталія", 40, "вчитель");
+                </p>
+              </li>
+            </ol>
+            <img src="./img/objec.jpeg" alt="loops" class="img" />
+            <p>
+              Ці основні аспекти дозволяють вам ефективно працювати з об'єктами
+              в JavaScript, організовувати код та створювати повторно
+              використовувані компоненти вашої програми.
+            </p>
+            <h2 class="block-header">Перевірка знань</h2>
+            <form class="quiz-form" id="quizForm3">
+              <fieldset class="quiz-fieldset" id="fieldset2">
+                <div class="quiz-wrap-set">
+                  <p>
+                    1. Як правильно оголосити функцію greet з параметром name?
+                  </p>
+                  <label class="quiz-label"
+                    ><input type="radio" name="q1" value="True" checked /> a)
+                    function(name) { ... }</label
+                  >
+                  <label class="quiz-label"
+                    ><input type="radio" name="q1" value="True" /> b)
+                    greet(name) { ... }</label
+                  >
+                  <label class="quiz-label"
+                    ><input type="radio" name="q1" value="true" /> c) function
+                    greet(name) { ... }</label
+                  >
+                </div>
+
+                <div class="quiz-wrap-set">
+                  <p>
+                    2. Яке ключове слово використовується для повернення
+                    значення з функції?
+                  </p>
+                  <label class="quiz-label"
+                    ><input type="radio" name="q2" value="True" checked /> a)
+                    send</label
+                  >
+                  <label class="quiz-label"
+                    ><input type="radio" name="q2" value="True" /> b)
+                    back</label
+                  >
+                  <label class="quiz-label"
+                    ><input type="radio" name="q2" value="true" /> c)
+                    return</label
+                  >
+                </div>
+
+                <div class="quiz-wrap-set">
+                  <p>
+                    3. Як визначити анонімну функцію, що призначається змінній
+                    square?
+                  </p>
+                  <label class="quiz-label"
+                    ><input type="radio" name="q3" value="True" checked /> a)
+                    let square(x) { ... }</label
+                  >
+                  <label class="quiz-label"
+                    ><input type="radio" name="q3" value="true" /> b) let square
+                    = function(x) { ... }</label
+                  >
+                  <label class="quiz-label"
+                    ><input type="radio" name="q3" value="True" /> c) let square
+                    = (x) => { ... }</label
+                  >
+                </div>
+              </fieldset>
+            </form>
+            <div class="twoButtonsWrap">
+              <button
+                type="button"
+                onclick="submitQuiz('quizForm3')"
+                class="main-button check-button"
+              >
+                Перевірити
+              </button>
+              <button
+                class="main-button check-button"
+                onclick="showCorrectAnswerField('fieldset2')"
+              >
+                Показати відповіді
+              </button>
+            </div>
+
+            <h2 class="block-header">Перевірка знань</h2>
+            <p>Виконайте наступні вказівки в редакторі нижче:</p>
+            <h3>Створення масиву книг:</h3>
+            <ul class="modal-ulist">
+              <li>Створіть змінну books.</li>
+              <li>
+                Призначте цій змінній масив об'єктів.
+                <p class="code">
+                  [ { title: "Гаррі Поттер і таємна кімната", author: "Джоан
+                  Роулінг", pages: 360 }, { title: "Війна світів", author:
+                  "Герберт Уеллс", pages: 192 }, { title: "Модель Меркьюрій",
+                  author: "Бенджамін Харді", pages: 288 }, { title: "Пан
+                  Тадеуш", author: "Адам Міцкевич", pages: 280 }, { title:
+                  "Маленький принц", author: "Антуан де Сент-Екзюпері", pages:
+                  96 } ];
+                </p>
+              </li>
+              <li>
+                Кожен об'єкт має містити властивості title, author і pages, що
+                представляють назву книги, ім'я автора та кількість сторінок
+                відповідно.
+              </li>
+            </ul>
+
+            <h3>Виведення інформації про кожну книгу:</h3>
+
+            <ul class="modal-ulist">
+              <li>
+                Виведіть заголовок, що вказує на те, що наступні дані стосуються
+                книг.
+                <p class="code">console.log("Інформація про книги:");</p>
+              </li>
+              <li>
+                Створіть цикл, який перебирає кожний об'єкт у масиві books.
+              </li>
+              <li>
+                Для кожного об'єкта виведіть на екран назву книги, ім'я автора
+                та кількість сторінок.Приклад виведення назви книги:
+                <p class="code">console.log("Назва: " + books[i].title);</p>
+              </li>
+              <li>
+                Додайте роздільник між кожною книгою для зручності відображення.
+              </li>
+            </ul>
+
+            <p
+              class="codepen"
+              data-height="400"
+              data-default-tab="js,result"
+              data-slug-hash="poBxoEK"
+              data-editable="true"
+              data-user="gfpvirml-the-styleful"
+              style="
+                height: 400px;
+                box-sizing: border-box;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border: 2px solid;
+                margin: 1em 0;
+                padding: 1em;
+              "
+            >
+              <span
+                >See the Pen
+                <a href="https://codepen.io/gfpvirml-the-styleful/pen/poBxoEK">
+                  Modal-work</a
+                >
+                by Oleksa (<a href="https://codepen.io/gfpvirml-the-styleful"
+                  >@gfpvirml-the-styleful</a
+                >) on <a href="https://codepen.io">CodePen</a>.</span
+              >
+            </p>
+            <script
+              async
+              src="https://cpwebassets.codepen.io/assets/embed/ei.js"
+            ></script>
+            <p>
+              Після правильного виконання попередніх пунктів натискаємо кнопку
+              "Edit on CodePen" у верхньому лівому куті редактора. У вас
+              відкриється нова вкладка з введеним вами кодом. Потім зліва знизу
+              натискаємо кнопку "Console"
+            </p>
+            <p>
+              При правильному виконанні вказівок в консолі побачимо наступне:
+            </p>
+            <img src="./img/consoleUser.jpg" alt="" class="img" />
+            <a href="./chapter3.html" class="main-link">До наступної теми</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="./js/js.js" type="module"></script>
+  </body>
+</html>
