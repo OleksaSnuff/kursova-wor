@@ -2,83 +2,764 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/kursova-wor/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vanilla App Template</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.min.css"
+      integrity="sha512-4xo8blKMVCiXpTaLzQSLSw3KFOVPWhm/TRtuPVc4WG6kUgjH6J03IBuG7JZPkcWMxJ5huwaBpOpnwYElP/m6wg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Тема 1</title>
     
-    <script type="module" crossorigin src="/kursova-wor/commonHelpers.js"></script>
-    <link rel="stylesheet" href="/kursova-wor/assets/index-10c40100.css">
+    <script type="module" crossorigin src="/kursova-wor/commonHelpers3.js"></script>
+    <link rel="modulepreload" crossorigin href="/kursova-wor/assets/styles-005b96ac.js">
+    <link rel="modulepreload" crossorigin href="/kursova-wor/assets/vendor-ad859c2f.js">
+    <link rel="stylesheet" href="/kursova-wor/assets/styles-758cd26b.css">
+    <link rel="stylesheet" href="/kursova-wor/assets/vendor-e5212ee8.css">
   </head>
   <body>
     <header class="header">
-  <nav class="nav">
-    <ul class="nav-list">
-      <li class="nav-item">
-        <a href="./page-2.html" class="nav-link">Page 2</a>
-      </li>
-
-      <li class="nav-item">
-        <a href="./page-3.html" class="nav-link">Page 3</a>
-      </li>
-    </ul>
-  </nav>
-</header>
-
-
-    <section>
-      <h1>Example page title</h1>
-      <!-- Path to images as from index.html file -->
-      <img src="/kursova-wor/assets/javascript-8dac5379.svg" alt="" />
-    </section>
-
-    <!-- Loads the specified .html file -->
-    <section class="vite-promo">
-  <div class="container">
-    <div class="wrapper">
-      <h2 class="title">
-        <span class="gradient">Vite</span>
-      </h2>
-      <p class="text">Next Generation Frontend Tooling</p>
-      <p class="tagline">
-        Get ready for a development environment that can finally catch up with
-        you.
-      </p>
-
-      <ul class="actions">
-        <li class="action">
-          <a
-            class="link"
-            href="https://vitejs.dev/guide/"
-            target="_blank"
-            rel="noopener noreferrer"
-            >Get Started</a
+      <div class="header-wrap conatainer">
+        <a href="./index.html" class="header_logo"
+          >Lern<span class="header_logo_it">IT</span></a
+        >
+        <nav class="header-navigation">
+          <ul class="header-navigation-list">
+            <li class="header-navigation-list-item">
+              <a href="./index.html" class="header-navigation-link">Тема 1</a>
+            </li>
+            <li class="header-navigation-list-item">
+              <a href="./chapter2.html" class="header-navigation-link"
+                >Тема 2</a
+              >
+            </li>
+            <li class="header-navigation-list-item">
+              <a href="./chapter3.html" class="header-navigation-link"
+                >Тема 3</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <section class="zero-section" id="section-0">
+        <div class="zero-chapter-wrap conatainer">
+          <div class="section-wrap">
+            <h1 class="chapter-header">
+              Тема 1. Динамічна, об'єктно-орієнтована мова програмування
+              JavaScript
+            </h1>
+            <p>У цій темі ми будемо розглядати:<br /></p>
+            <ol class="theme-list">
+              <li>
+                <p>Поняття про JavaScript<br /></p>
+              </li>
+              <li>
+                <p>
+                  Технологія створення вебсторінок за допомогою HTML та CSS<br />
+                </p>
+              </li>
+              <li>
+                <p>
+                  Методика використання JavaScript при створенні вебсторінок
+                </p>
+              </li>
+              <li>
+                <p>
+                  Технологія застосування Java-скриптів на вебсторінках<br />
+                </p>
+              </li>
+              <li>
+                <p>Створення контенту сторінок з використанням Java-скриптів</p>
+              </li>
+            </ol>
+          </div>
+          <button
+            type="button"
+            class="main-button"
+            id="zero-butt"
+            onclick="showSection( 'section-1')"
           >
-        </li>
-        <li class="action">
-          <a
-            class="link"
-            href="https://github.com/vitejs/vite"
-            target="_blank"
-            rel="noopener noreferrer"
-            >View on GitHub</a
-          >
-        </li>
-      </ul>
-    </div>
+            Починаймо!
+          </button>
+        </div>
+      </section>
+      <section class="first-section visually-hidden" id="section-1">
+        <div class="conatainer" id="first-section">
+          <div class="section-wrap">
+            <h2 class="section-header">Поняття про JavaScript</h2>
+            <p>
+              JavaScript (або скорочено JS) — це повноцінна динамічна мова
+              програмування, яка застосовується до HTML документу та може
+              забезпечити динамічну взаємодію на вебсайтах. Її розробив Брендан
+              Айк, співзасновник проекту Mozilla, Mozilla Foundation та Mozilla
+              Corporation.
+            </p>
+            <img src="/kursova-wor/assets/javascript-31fdf643.webp" alt="" class="img" />
+            <p>
+              JavaScript неймовірно універсальний і дружелюбний до новачків. З
+              великим досвідом ви зможете створювати ігри, анімовану 2D і 3D
+              графіку, повномасштабні додатки з базами даних та багато іншого!
+            </p>
+            <p>
+              Ця мова програмування широко використовується у веброзробці як на
+              стороні клієнта, так і на стороні сервера. JavaScript може бути
+              використаний для створення повноцінних вебдодатків, включаючи
+              інтерактивні вебсайти, односторінкові додатки (SPA), вебігри та
+              мобільні додатки.
+            </p>
+            <p>
+              JavaScript сам по собі досить компактний, і при цьому дуже
+              гнучкий. Розробниками написано велику кількість інструментів
+              поверх основної мови JavaScript, які розблоковують велику
+              кількість додаткових функцій з дуже невеликими зусиллями.
+            </p>
+            <h2 class="block-header">Перевірка знань</h2>
+            <div class="quiz-wrap" id="test1_1"></div>
 
-    <div class="thumb">
-      <!-- Path to images as from index.html file -->
-      <img
-        class="pic"
-        src="/kursova-wor/assets/vite-logo-51249ca9.png"
-        alt="Vite logo"
-        width="640"
-        height="640"
-      />
-    </div>
-  </div>
-</section>
+            <div class="twoButtonsWrap">
+              <button id="button1_1" class="main-button check-button">
+                Перевірити
+              </button>
+              <button
+                class="main-button check-button"
+                onclick="showCorrectAnswer('test1_1')"
+              >
+                Показати відповіді
+              </button>
+            </div>
 
+            <h2 class="block-header">
+              Технологія створення вебсторінок за допомогою HTML та CSS
+            </h2>
+            <p>
+              Технологія створення вебсторінок за допомогою HTML та CSS полягає
+              в поєднанні двох основних мов - HTML (HyperText Markup Language) і
+              CSS (Cascading Style Sheets), які спільно визначають вигляд і
+              структуру вебсторінок. Взаємодія HTML і CSS полягає в тому, що
+              HTML визначає структуру та логіку сторінки, в той час як CSS
+              відповідає за її вигляд та оформлення. Це дозволяє розробникам
+              створювати вебсторінки з чіткою структурою, а також з атрактивним
+              та привабливим дизайном.
+            </p>
+
+            <p>
+              Для кращого розуміння можна навести анологію в якій HTML буде
+              "скелет", а CSS "шкіра". HTML можна розглядати як "скелет"
+              вебсторінки - він визначає структуру та елементи сторінки, такі як
+              заголовки, параграфи, списки, таблиці тощо. Ці елементи утворюють
+              основу сторінки і визначають її основну структуру.<br />
+              CSS, з іншого боку, можна розглядати як "шкіра" - він визначає
+              зовнішній вигляд і стиль сторінки. За допомогою CSS можна
+              змінювати кольори тексту, фону, встановлювати розміри та форму
+              елементів, задавати відстані між елементами, розташування тощо.
+            </p>
+            <p>
+              Отже, HTML надає структуру і контент сторінки, тоді як CSS надає
+              стиль та оформлення. Підключаючи CSS до HTML, ви можите створити
+              привабливий та естетичний дизайн для вашого контенту.
+            </p>
+            <img
+              src="/kursova-wor/assets/HTML-and-CSS-b071db99.png"
+              alt="skin and skeleton"
+              class="img"
+            />
+            <p>
+              Розглянемо детальніше, де і як HTML та CSS використовуються у
+              веброзробці:
+            </p>
+            <p>
+              HTML (HyperText Markup Language) використовується для створення
+              структури вебсторінок. Основні використовуються випадки:
+            </p>
+            <ol>
+              <li>
+                <p>
+                  <b>Відображення тексту та зображень:</b><br />
+                  Елементи HTML, такі як &lt;p&gt; для параграфів тексту та
+                  &lt;img&gt; для зображень, дозволяють розміщувати контент на
+                  веб сторінці. Приклад:
+                </p>
+                <p class="code">
+                  &lt;p&gt;Це параграф з текстом.&lt;/p&gt;<br />
+                  &lt;img src="image.jpg" alt="Зображення"&gt;
+                </p>
+              </li>
+              <li>
+                <p>
+                  <b>Створення заголовків і підзаголовків:</b> <br />
+                  Елементи &lt;h1&gt;, &lt;h2&gt;, &lt;h3&gt; і т. д.
+                  використовуються для визначення рівнів заголовків на сторінці.
+                </p>
+                <p>Приклад:</p>
+                <p class="code">
+                  &lt;h1&gt;Головний Заголовок&lt;/h1&gt;<br />
+                  &lt;h2&gt;Підзаголовок&lt;/h2&gt;
+                </p>
+              </li>
+              <li>
+                <p>
+                  <b>Створення списків:</b><br />
+                  Елементи &lt;ul&gt; (невпорядкований список) та &lt;ol&gt;
+                  (впорядкований список) використовуються для створення списків
+                  елементів.
+                </p>
+                <p>Приклад:</p>
+                <p class="code">
+                  &lt;ul&gt;<br />
+                  &lt;li&gt; <br />
+                  Елемент списку 1<br />
+                  &lt;/li&gt;<br />
+                  &lt;li&gt;<br />Елемент списку 2<br />&lt;/li&gt;<br />
+                  &lt;/ul&gt;
+                </p>
+              </li>
+              <li>
+                <p>
+                  <b>Створення посилань:</b><br />
+                  Елемент &lt;a&gt; використовується для створення посилань на
+                  інші вебсторінки або ресурси.
+                </p>
+                <p>Приклад:</p>
+                <p class="code">
+                  &lt;a href="https://www.example.com"&gt;Посилання на іншу
+                  сторінку&lt;/a&gt;
+                </p>
+              </li>
+            </ol>
+            <img src="/kursova-wor/assets/css-2fd71ab8.jpg" alt="skin and skeleton" class="img" />
+            <p>
+              CSS (Cascading Style Sheets) використовується для оформлення
+              стилів вебсторінок. Основні використовуються випадки:
+            </p>
+            <ol>
+              <li>
+                <p>
+                  <b>Зміна кольорів та фонів:</b><br />
+                  CSS дозволяє визначати кольори тексту, фону елементів і фонові
+                  зображення.
+                </p>
+                <p>Приклад:</p>
+                <p class="code">
+                  body { <br />color: #333; /* Колір тексту */<br />
+                  background-color: #f0f0f0; /* Колір фону */<br />
+                  }
+                </p>
+              </li>
+              <li>
+                <p>
+                  <b>Форматування шрифтів:</b><br />
+                  CSS дозволяє вибирати різні шрифти, розміри шрифтів та
+                  стилізувати текст.
+                </p>
+                <p>Приклад:</p>
+                <p class="code">
+                  p {<br />
+                  font-family: Arial, sans-serif; /* Вибір шрифта */<br />
+                  font-size: 16px; /* Розмір шрифта */<br />
+                  font-weight: bold; /* Товщина шрифта */ <br />}
+                </p>
+              </li>
+              <li>
+                <p>
+                  <b>Розміщення та розташування елементів:</b><br />
+                  CSS дозволяє керувати розташуванням елементів на сторінці,
+                  встановлюючи відступи, позиціонування та розміри.
+                </p>
+                <p>Приклад:</p>
+                <p class="code">
+                  header {<br />
+                  text-align: center; /* Вирівнювання тексту по центру */<br />
+                  padding: 20px; /* Відступи від країв */ <br />}
+                </p>
+              </li>
+            </ol>
+            <p>
+              Класи в CSS - це іменовані набори стилів, які можуть бути
+              застосовані до одного або декількох елементів HTML. Використовуючи
+              класи, ви можете створити специфічні стилі, які можна легко
+              застосувати до будь-якої кількості елементів на сторінці.
+            </p>
+            <p>
+              Класи визначаються у CSS за допомогою селектора класу, який
+              починається з крапки (.), за якою слідує ім'я класу. Наприклад,
+              якщо ви хочете визначити стилі для класу з ім'ям "button", то ви
+              можете зробити це так:
+            </p>
+            <p class="code">.button { background-color: #007bff;}</p>
+            <p>
+              Це визначає стилі для елементів, які мають клас "button". Потім ви
+              можете застосувати цей клас до будь-якого елемента HTML, вказавши
+              його атрибут класу. Наприклад:
+            </p>
+            <p class="code">
+              &lt;button class="button"&gt;Натисніть на мене&lt;/button&gt;
+            </p>
+            <h2 class="block-header">Перевірка знань</h2>
+            <form class="quiz-form" id="quizForm1_1">
+              <fieldset class="quiz-fieldset" id="fieldset1_1">
+                <div class="quiz-wrap-set">
+                  <p>1. Як HTML визначає структуру та логіку сторінки?</p>
+                  <label class="quiz-label"
+                    ><input type="radio" name="q1" value="true" checked /> a)
+                    Структуру</label
+                  >
+                  <label class="quiz-label"
+                    ><input type="radio" name="q1" value="True" /> b)
+                    Стиль</label
+                  >
+                  <label class="quiz-label"
+                    ><input type="radio" name="q1" value="True" /> c)
+                    Вигляд</label
+                  >
+                </div>
+
+                <div class="quiz-wrap-set">
+                  <p>2. Що визначає CSS у веброзробці?</p>
+                  <label class="quiz-label"
+                    ><input type="radio" name="q2" value="True" checked /> a)
+                    Структуру</label
+                  >
+                  <label class="quiz-label"
+                    ><input type="radio" name="q2" value="true" /> b)
+                    Логіку</label
+                  >
+                  <label class="quiz-label"
+                    ><input type="radio" name="q2" value="True" /> c)
+                    Стиль</label
+                  >
+                </div>
+
+                <div class="quiz-wrap-set">
+                  <p>3. Як використовуються класи в CSS?</p>
+                  <label class="quiz-label"
+                    ><input type="radio" name="q3" value="True" checked /> a)
+                    Для зміни кольорів</label
+                  >
+                  <label class="quiz-label"
+                    ><input type="radio" name="q3" value="True" /> b) Для
+                    визначення розміщення елементів</label
+                  >
+                  <label class="quiz-label"
+                    ><input type="radio" name="q3" value="true" /> c) Для
+                    застосування специфічних стилів</label
+                  >
+                </div>
+              </fieldset>
+            </form>
+
+            <div class="twoButtonsWrap">
+              <button
+                type="button"
+                onclick="submitQuiz('quizForm1_1')"
+                class="main-button check-button"
+              >
+                Перевірити
+              </button>
+              <button
+                class="main-button check-button"
+                onclick="showCorrectAnswerField('fieldset1_1')"
+              >
+                Показати відповіді
+              </button>
+            </div>
+
+            <!-- <div id="test" class="quiz-wrap"></div>
+            <button type="submit" id="button" class="main-button check-button">
+              Перевірити
+            </button> -->
+            <button
+              type="button"
+              class="main-button"
+              onclick="showSection( 'section-2')"
+            >
+              До наступного блоку
+            </button>
+          </div>
+        </div>
+      </section>
+      <section class="first-section visually-hidden" id="section-2">
+        <div class="conatainer" id="second-section">
+          <div class="section-wrap">
+            <h2 class="section-header">JavaScript при створенні вебсторінок</h2>
+            <h2 class="block-header">
+              Методика використання JavaScript при створенні вебсторінок
+            </h2>
+            <img src="/kursova-wor/assets/execution-dda499e8.png" alt="types of data" class="img" />
+            <p>
+              Використання JavaScript при створенні вебсторінок - це невід'ємна
+              складова сучасної веброзробки, яка дозволяє зробити сторінки більш
+              динамічними, інтерактивними та функціональними. Ось методика
+              використання JavaScript при створенні вебсторінок:
+            </p>
+            <ol>
+              <li>
+                <p>
+                  <b>Доступ до DOM (Document Object Model):</b><br />
+                  JavaScript дозволяє отримати доступ до елементів та структури
+                  вебсторінки через DOM. Ви можете звертатися до елементів,
+                  змінювати їх властивості, додавати або видаляти елементи,
+                  реагувати на події та багато іншого.
+                </p>
+              </li>
+              <li>
+                <p>
+                  <b>Взаємодія з користувачем:</b><br />
+                  JavaScript дозволяє створювати інтерактивні елементи та
+                  функціонал на сторінці. Наприклад, ви можете додавати
+                  обробники подій, такі як клік чи наведення миші, для взаємодії
+                  з користувачем.
+                </p>
+              </li>
+              <li>
+                <p>
+                  <b>Асинхронні запити на сервер:</b><br />
+                  JavaScript може використовуватися для виконання асинхронних
+                  запитів на сервер за допомогою технологій, таких як AJAX
+                  (Asynchronous JavaScript and XML) або Fetch API. Це дозволяє
+                  оновлювати вміст сторінки без перезавантаження, взаємодіючи з
+                  сервером у фоновому режимі.
+                </p>
+              </li>
+              <li>
+                <p>
+                  <b>Анімація та ефекти:</b><br />
+                  JavaScript може використовуватися для створення анімацій,
+                  переходів та інших візуальних ефектів на сторінці. Ви можете
+                  керувати анімаціями за допомогою CSS або програмно змінювати
+                  стилі елементів для створення різних візуальних ефектів.
+                </p>
+              </li>
+              <li>
+                <p>
+                  <b>Робота з формами:</b><br />
+                  JavaScript дозволяє виконувати перевірку даних, обробляти
+                  введення користувача та взаємодіяти з формами на сторінці. Ви
+                  можете валідувати введені дані, додавати автозаповнення,
+                  валідувати поля та відправляти дані на сервер.
+                </p>
+              </li>
+              <li>
+                <p>
+                  <b>Використання сторонніх бібліотек і фреймворків:</b><br />
+                  JavaScript має широкий вибір сторонніх бібліотек і
+                  фреймворків, таких як React, Angular, Vue.js та інші. Вони
+                  надають додаткові функції та інструменти для швидкої і
+                  ефективної розробки вебдодатків.
+                </p>
+              </li>
+            </ol>
+            <p>
+              Отже, JavaScript використовується для створення різноманітних
+              функцій та ефектів, які додають інтерактивність і привабливість до
+              вебсторінок, забезпечуючи кращий користувацький досвід.
+            </p>
+            <h2 class="block-header">Перевірка знань</h2>
+            <div class="quiz-wrap" id="test1_2"></div>
+
+            <div class="twoButtonsWrap">
+              <button id="button1_2" class="main-button check-button">
+                Перевірити
+              </button>
+              <button
+                class="main-button check-button"
+                onclick="showCorrectAnswer('test1_2')"
+              >
+                Показати відповіді
+              </button>
+            </div>
+
+            <h2 class="block-header">
+              Технологія застосування Java-скриптів на вебсторінках
+            </h2>
+
+            <p>Існують три основних методи підключення JavaScript до HTML:</p>
+            <ol>
+              <li>
+                <p>
+                  <strong>Вбудований (Inline):</strong><br />
+                  JavaScript-код вставляється безпосередньо в HTML-документ між
+                  тегами &lt;script&gt; та &lt;/script&gt;. Наприклад:
+                </p>
+                <p class="code">
+                  &lt;script&gt; <br />// JavaScript код тут<br />
+                  &lt;/script&gt;
+                </p>
+              </li>
+              <li>
+                <p>
+                  <strong>Зовнішній файл (External):</strong><br />
+                  JavaScript-код розміщується у окремому файлі з розширенням
+                  .js, а потім цей файл підключається до HTML-документа за
+                  допомогою атрибута src тега &lt;script&gt;. Наприклад:
+                </p>
+
+                <p class="code">
+                  &lt;script src="script.js"&gt;&lt;/script&gt;
+                </p>
+              </li>
+              <li>
+                <p>
+                  <strong>Атрибут onclick, onload тощо:</strong><br />
+                  JavaScript-код може бути викликаний з атрибутів
+                  HTML-елементів, таких як onclick, onload, onmouseover, тощо.
+                  Наприклад:
+                </p>
+
+                <p class="code">
+                  &lt;button onclick="myFunction()"&gt;Натисни
+                  мене&lt;/button&gt;
+                </p>
+              </li>
+            </ol>
+            <p>
+              Зазвичай JavaScript підключається як окремий файл, або декілька
+              окремиї файлів. Це зроблено для зручності та прийнято стандартами
+              програмістів.
+            </p>
+            <img
+              src="/kursova-wor/assets/script-8ae63fbd.jpg"
+              alt="javascript operators"
+              class="img"
+            />
+            <p>
+              Крім зручності та відповідності стандартам програмістів,
+              підключення JavaScript як окремих файлів дозволяє зберігати код у
+              більш організованому та систематизованому вигляді. Це сприяє
+              підтримці та розвитку проектів на протязі тривалого часу, спрощує
+              роботу над ними для багатьох розробників та полегшує спільне
+              використання коду між різними частинами проекту або навіть між
+              різними проектами. Такий підхід також підвищує стійкість проекту
+              до помилок та полегшує процес відлагодження та підтримки.
+            </p>
+            <h2 class="block-header">
+              Створення контенту сторінок з використанням Java-скриптів
+            </h2>
+            <p>
+              JavaScript надає багато можливостей для динамічного створення
+              контенту на сторінці. Ось деякі способи, якими ви можете
+              використовувати JavaScript для створення контенту:
+            </p>
+            <ul>
+              <li>
+                <p>
+                  <strong>DOM Маніпуляція:</strong> Ви можете створювати,
+                  змінювати або видаляти HTML-елементи за допомогою JavaScript.
+                  Це досягається шляхом отримання доступу до DOM (Document
+                  Object Model) елементів і використання методів, таких як
+                  createElement, appendChild, innerHTML тощо.
+                </p>
+
+                <p class="code">
+                  // Створення нового елементу <br />&lt;div&gt; let newDiv =
+                  document.createElement("div"); <br />// Додавання текстового
+                  вмісту newDiv.innerHTML = "Новий контент";<br />
+                  // Додавання елементу до існуючого елементу з
+                  id="container"<br />
+                  document.getElementById("container").appendChild(newDiv);
+                </p>
+              </li>
+
+              <li>
+                <p>
+                  <strong>AJAX (Asynchronous JavaScript and XML):</strong> Ви
+                  можете використовувати AJAX для отримання даних з сервера без
+                  перезавантаження сторінки. Отримані дані можна використовувати
+                  для створення або оновлення контенту на сторінці.
+                </p>
+
+                <p class="code">
+                  // Використання AJAX для отримання даних з сервера<br />
+                  let xhr = new XMLHttpRequest();<br />
+                  xhr.open("GET", "data.json", true);<br />
+                  xhr.onload = function() { <br />if (xhr.status == 200) {<br />
+                  // Обробка отриманих даних<br />
+                  let data = JSON.parse(xhr.responseText);<br />
+                  // Вставка даних на сторінку<br />
+                  document.getElementById("dataContainer").innerHTML =
+                  data.content;<br />
+                  } <br />};<br />
+                  xhr.send();
+                </p>
+              </li>
+              <li>
+                <p>
+                  <strong>Шаблонізація (Template Engines):</strong> Ви можете
+                  використовувати бібліотеки або фреймворки шаблонізації, такі
+                  як Handlebars, Mustache, або шаблонізатори в Angular або
+                  React, для створення шаблонів HTML, які можна заповнити
+                  динамічними даними.
+                </p>
+                <p>Наприклад з використанням Handlebars:</p>
+
+                <p class="code">
+                  // Компіляція шаблону<br />
+                  let template = Handlebars.compile("&lt;p&gt;{{name}} є
+                  {{role}}&lt;/p&gt;");<br />
+                  // Дані для заповнення шаблону<br />
+                  let context = { name: "John", role: "розробник" };<br />
+                  // Вставка заповненого шаблону на сторінку<br />
+                  document.getElementById("templateContainer").innerHTML =
+                  template(context);
+                </p>
+              </li>
+              <li>
+                <p>
+                  <strong>Генерація HTML:</strong> Ви можете генерувати HTML-код
+                  за допомогою JavaScript, який потім можна вставити на
+                  сторінку.
+                </p>
+
+                <p class="code">
+                  // Генерація списку<br />
+                  let listHTML = "&lt;ul&gt;";<br />
+                  for (let i = 1; i &lt;= 5; i++)<br />
+                  {<br />
+                  listHTML += "&lt;li&gt;Елемент " + i + "&lt;/li&gt;";<br />
+                  }<br />
+                  listHTML += "&lt;/ul&gt;"; <br />// Вставка HTML на
+                  сторінку<br />
+                  document.getElementById("listContainer").insertAdjacentHTML('beforeend',
+                  listHTML);
+                </p>
+                <p>
+                  Функція insertAdjacentHTML має чотири режими вставки, кожен з
+                  яких визначає місце вставки відносно обраного елемента.
+                  Значення "beforebegin" вставляє HTML перед обраним елементом,
+                  "afterbegin" вставляє HTML всередину обраного елемента перед
+                  всіма його дочірніми елементами, "beforeend" вставляє HTML в
+                  кінець обраного елемента, після всіх його дочірніх елементів,
+                  а "afterend" вставляє HTML після обраного елемента.
+                </p>
+                <img
+                  src="/kursova-wor/assets/insert-adjacent-2a6eb5e5.jpg"
+                  alt="skin and skeleton"
+                  class="img"
+                />
+              </li>
+            </ul>
+            <h2 class="block-header">Перевірка знань</h2>
+            <form class="quiz-form" id="quizForm1_2">
+              <fieldset class="quiz-fieldset" id="fieldset1_2">
+                <div class="quiz-wrap-set">
+                  <p>1. Який метод підключення JavaScript до HTML існує?</p>
+                  <label class="quiz-label">
+                    <input type="radio" name="q1" value="True" checked /> а)
+                    filed
+                  </label>
+                  <label class="quiz-label">
+                    <input type="radio" name="q1" value="true" /> б) External
+                  </label>
+                  <label class="quiz-label">
+                    <input type="radio" name="q1" value="True" /> в) Embedded
+                  </label>
+                </div>
+
+                <div class="quiz-wrap-set">
+                  <p>2. Яким чином можна використовувати AJAX у JavaScript?</p>
+                  <label class="quiz-label">
+                    <input type="radio" name="q2" value="True" checked /> а) Для
+                    створення інтерактивних елементів
+                  </label>
+                  <label class="quiz-label">
+                    <input type="radio" name="q2" value="True" /> б) Для
+                    асинхронних запитів на сервер
+                  </label>
+                  <label class="quiz-label">
+                    <input type="radio" name="q2" value="true" /> в) Для
+                    валідації форм
+                  </label>
+                </div>
+
+                <div class="quiz-wrap-set">
+                  <p>
+                    3. Які переваги має зберігання JavaScript-коду в окремих
+                    файлах?
+                  </p>
+                  <label class="quiz-label">
+                    <input type="radio" name="q3" value="True" checked /> а)
+                    Збільшення продуктивності
+                  </label>
+                  <label class="quiz-label">
+                    <input type="radio" name="q3" value="true" /> б) Підвищення
+                    організації та підтримки коду
+                  </label>
+                  <label class="quiz-label">
+                    <input type="radio" name="q3" value="True" /> в) Збільшення
+                    складності програмування
+                  </label>
+                </div>
+              </fieldset>
+            </form>
+            <div class="twoButtonsWrap">
+              <button
+                type="button"
+                onclick="submitQuiz('quizForm1_2')"
+                class="main-button check-button"
+              >
+                Перевірити
+              </button>
+              <button
+                class="main-button check-button"
+                onclick="showCorrectAnswerField('fieldset1_2')"
+              >
+                Показати відповіді
+              </button>
+            </div>
+            <h2 class="block-header">Перевірка навичок</h2>
+            <p>Виконайте наступні вказівки в полі нижче:</p>
+            <ol>
+              <li>
+                Створіть контейнер: Додайте в поле контейнер, який буде
+                вміщувати всі інші елементи. Додайте йому клас "container".
+              </li>
+              <li>
+                Додайте заголовок:Напишіть "Ласкаво просимо на мою вебсторінку"
+                всередині цих тегів, та додайте клас "title"
+              </li>
+              <li>
+                Додайте параграф: Створіть параграф та додайте власний текст в
+                нього, наприклад ваше ім'я.
+              </li>
+              <li>
+                Додайте список: Додайте невпорядкований список та впишіть три
+                елементи списку між відповідними тегами, додайте в кожен елемент
+                власний текст.
+              </li>
+              <li>
+                Додайте кнопку: Додайте кнопку з класом "button". Напишіть
+                "Наведіть на мене" всередині відповідних тегів.
+              </li>
+            </ol>
+
+            <textarea
+              id="codeInput"
+              class="codeInput"
+              rows="10"
+              cols="50"
+            ></textarea
+            ><br />
+            <button onclick="openCode()" class="user-button">
+              Відкрити код
+            </button>
+            <p>
+              Якщо виконали завдання правильно то отримаєте сторінку схожу на
+              цю:
+            </p>
+            <img src="/kursova-wor/assets/ui-8a703c31.jpg" alt="" class="img" />
+            <a href="./chapter2.html" class="main-link">До наступної теми</a>
+          </div>
+        </div>
+      </section>
+    </main>
 
     
   </body>
